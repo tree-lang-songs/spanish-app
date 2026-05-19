@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<title>Songs</title>
+	
+	<link rel="preconnect" href="https://www.youtube-nocookie.com">
+	<link rel="preconnect" href="https://www.google.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+	
+	<link rel="stylesheet" href="motor/vertical.css">
+</head>
+<body>
+	
+	<escenas-juego>
+		<portada-juego escena-actual>
+			<h1>Songs</h1>
+			<button class="análisis">Analysis</button>
+			<lista-canciones></lista-canciones>
+			
+			<link rel="stylesheet" href="estilo.css">
+			
+			<script src="motor/documento.js"></script>
+			<script src="motor/diálogos.js"></script>
+			<script src="motor/juglar.js"></script>
+			
+			<!--<script src="actividades/lista_canciones.js"></script>-->
+		</portada-juego>
+		
+		<escena-análisis>
+			<button class="volver">◀︎</button>
+			<h2>Analysis</h2>
+			<ul>
+			</ul>
+			<button class="evolución_contenidos">Contents evolution</button>
+			<button class="palabras_base_comunes">Common base words</button>
+			<script src="actividades/análisis.js"></script>	
+		</escena-análisis>
+		
+		<escena-evolución-contenidos>
+			<button class="volver">◀︎</button>
+			<h2>Contents evolution</h2>
+			<table>
+				<thead><tr><th>Words</th><th>Base</th><th>Repeated</th></tr></thead>
+				<tbody>
+				</tbody>
+			</table>
+		</escena-evolución-contenidos>
+		
+		<escena-palabras-base>
+			<button class="volver">◀︎</button>
+			<h2>Common base words</h2>
+			<table>
+				<thead><tr><th>Word</th><th>Meaning</th><th>Songs</th></tr></thead>
+				<tbody>
+				</tbody>
+			</table>
+		</escena-palabras-base>
+		
+		<escena-canción>
+			<button class="volver">◀︎</button>
+			<h2>Song</h2>
+			
+			<reproductor-canción>
+				<div id="mi-reproductor"></div>
+			</reproductor-canción>
+			<!--<audio id="player" controls> <source id="audioSource" src="" type="audio/mpeg"> Tu navegador no soporta audio HTML5. </audio>-->
+			
+			<letra-canción></letra-canción>
+			<button class="practicar">Practice</button>
+			<button class="practicar_palabras">Practice words</button>
+			
+			<table>
+				<thead><tr>
+					<th>Word</th><th>Meaning</th>
+				</tr></thead>
+				<tbody></tbody>
+			</table>
+			
+		</escena-canción>
+		
+		<escena-ejercicio>
+			<button class="volver">◀︎</button>
+			
+			<pregunta-ejercicio>Pregunta</pregunta-ejercicio>
+			
+			<botones-respuestas>
+				<button>Respuesta 1</button>
+				<button>Respuesta 2</button>
+			</botones-respuestas>
+		</escena-ejercicio>
+		
+		
+	</escenas-juego>
+	
+	
+	<script src="motor/matemáticas.js"></script>
+	<script src="motor/glossa.js"></script>
+	<link rel="stylesheet" href="motor/glossa.css">
+	
+	<script src="modelo.js"></script>
+	<script src="inicio.js"></script>
+	<script src="actividades/lista_canciones.js"></script>
+	
+</body>
+</html>

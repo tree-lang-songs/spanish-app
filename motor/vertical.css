@@ -1,0 +1,63 @@
+html{
+	font-family: sans-serif;
+	height:100%;
+	display:flex;
+	justify-content: center;
+	background:black;
+	
+	font-size:calc(100vw/18);
+}
+
+.pixelart{
+	image-rendering: pixelated;
+}
+
+body{	
+	overflow: hidden;
+	width:100%;
+	position:relative;
+	margin:0;
+	font-size:1rem;
+}
+
+button{
+	cursor:pointer;
+	border:none;
+	padding: 0;
+	display: block;
+	background:#0000 no-repeat center;
+	background-size:100% 100%;
+	font-size:1rem;
+}
+
+@media screen and (orientation:landscape) {
+	html{
+		font-size:calc(100vh/32);
+	}
+	
+	body{
+		height: 100%;
+		width: auto;
+		aspect-ratio:9/16;
+		margin:auto;
+	}
+}
+
+escenas-juego > *{
+	position:absolute;
+	inset:0;
+	height:100%;
+	flex-direction:column;
+	display:flex;
+	pointer-events:none;
+	opacity:0;
+	transition: opacity 0.2s;
+	
+	background: no-repeat center;
+	background-size:100% 100%;
+	
+	&[escena-actual]{
+		pointer-events:auto;
+		opacity:1;
+	}
+}

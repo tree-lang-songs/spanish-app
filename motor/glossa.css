@@ -1,0 +1,72 @@
+
+frase-glosada{
+	
+	palabra-frase{
+		cursor:pointer;
+		position:relative;
+		
+		glosa-palabra{
+			--color-borde:white;
+			
+			position: absolute;
+			pointer-events: none;
+			background: #304;
+			border: 0.1rem solid var(--color-borde);
+			border-radius: 0.5rem;
+			padding: 0.1rem 0.5rem;
+			top: -1.7em;
+			width: max-content;
+			display: block;
+			
+			left: 50%;
+			translate: -50% 0;
+			
+			opacity:0;
+			scale: 0.8 0.3;
+			transform-origin:bottom;
+			transition:opacity 0.2s, scale 0.2s;
+			
+			transliteración-palabra{
+				display:block;
+				color:violet;
+			}
+			
+			&::before {
+				content: '';
+				width: 0;
+				height: 0;
+				border-left: 0.3rem solid transparent;
+				border-right: 0.3rem solid transparent;
+				border-top: 0.3rem solid var(--color-borde);
+				position: absolute;
+				z-index: 0;
+				bottom: -0.3rem;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+		}
+		
+		&:hover{
+			color:purple;
+			
+			glosa-palabra{
+				opacity:1;
+				scale: 1 1;
+			}
+		}
+	}
+	
+	&:not(:has(palabra-frase:hover)) palabra-frase.menos_vista {
+		color:#bbd674;
+		
+		glosa-palabra{
+			opacity:1;
+			scale: 1 1;
+			color:white;
+		}
+	}
+}
+
+traducción-frase{
+	font-size:1rem;
+}
